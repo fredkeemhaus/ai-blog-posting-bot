@@ -2,10 +2,6 @@
 NOTION_TOKEN = 'a3ddfde2aad2e0764193655544cb7369c13eb2b73584a95e0a7850b45f602d897e283e93886e2763fd7ab776007f6c4f6b4769aa275944aaea58925ce79361ab40453d6a3c9ab2547551dc1126c9'
 NOTION_SPACE_ID = '5e48dc63-d3c3-4cbc-bdb9-e7b46159137a'
 
-# Kakao
-KAKAO_ID = 'fredkeemhaus'
-KAKAO_PW = 'vhwkd01'
-
 # Tistory
 BLOG_URL = 'https://fredkeem.tistory.com/'
 CLIENT_ID = 'd8e8692d3b84d90f9a479d6fe47b0ce1'
