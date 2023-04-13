@@ -7,7 +7,7 @@ import requests
 import urllib.request
 from config import *
 
-TOPIC = '사람들을 웃기는 방법'
+TOPIC = '리액트 Rxjs 사용법 예시'
 
 ###################
 # 0. Prepare APIs #
@@ -18,6 +18,7 @@ ts.access_token = ACCESS_TOKEN
 openai.api_key = OPENAI_API_KEY
 
 translator = Translator(from_lang='ko', to_lang='en')
+
 
 ########################
 # 1. Write a blog post #
@@ -65,17 +66,23 @@ replacer = res_upload.json()['tistory']['replacer']
 #######################
 print('[4] 포스팅 업로드 하는 중...')
 
+print(content, 1)
+
 content = f"""
 <p>{replacer}</p>
 
 {content}
 """
 
+
+
 html = markdown.markdown(content)
+
+print(html, 3)
 
 res_post = ts.write_post(
     title=title,
-    content=html,
+    content=content,
     visibility='3',         # 발행상태 (0: 비공개 - 기본값, 1: 보호, 3: 발행)
     acceptComment='1')      # 댓글 허용 (0, 1 - 기본값)
 
